@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: postgres-testaman
+    restart: always
+    environment:
+      POSTGRES_DB: testaman
+      POSTGRES_USER: testaman
+      POSTGRES_PASSWORD: testaman
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: go-testaman
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: testaman
+      DB_PASSWORD: testaman
+      DB_NAME: testaman
+      JWT_SECRET: your_jwt_secret
+    ports:
+      - "8081:8081"
+    env_file:
+      - .env
+    restart: always
+
+volumes:
+  postgres_data:
