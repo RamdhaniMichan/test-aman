@@ -30,7 +30,7 @@
 
 ## Menjalankan dengan Docker
 
-1. **Clone repo https://github.com/RamdhaniMichan/test-aman.git**
+1. **Clone repo https://github.com/RamdhaniMichan/Backend-Ramdhani-Michandari**
 2. **Buat file `.env`** (lihat contoh di bawah)
 3. **Build & jalankan**
    ```sh
