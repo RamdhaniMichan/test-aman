@@ -30,7 +30,7 @@
 
 ## Menjalankan dengan Docker
 
-1. **Clone repo ini**
+1. **Clone repo https://github.com/RamdhaniMichan/test-aman.git**
 2. **Buat file `.env`** (lihat contoh di bawah)
 3. **Build & jalankan**
    ```sh
